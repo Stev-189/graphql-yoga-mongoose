@@ -28,6 +28,8 @@ query {
     fullname
   }
 }
+
+
 Mutation
 Create
 mutation{
@@ -42,5 +44,14 @@ mutation{
     fullname
     phone
     city
+  }
+}
+
+delete
+mutation{
+  deleteUser(_id:"6053c44f44b1481b7022eef0"){
+    _id
+    nickname
+    fullname
   }
 }
