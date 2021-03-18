@@ -1,0 +1,46 @@
+GraphQL
+
+Introdsuccion 
+
+npm init -y
+npm i graphql-yoga mongoose
+npm i @babel/core @babel/cli @babel/node @babel/preset-env @babel/plugin-transform-runtime nodemon -D
+
+
+
+Query
+especifico
+query {
+  getUser(_id:"6053c44e44b1481b7022eeee")
+  {
+    _id
+    nickname
+    fullname
+    city
+  }
+}
+
+[array de usuarios]
+query {
+  getUsers{
+    _id
+    nickname
+    fullname
+  }
+}
+Mutation
+Create
+mutation{
+  createUser(
+    nickname:"MaxiTurbo",
+    fullname: "Maximiliano Pavez",
+    phone: "+56978987245",
+    city: "Santiago"
+  ){
+    _id
+    nickname
+    fullname
+    phone
+    city
+  }
+}
